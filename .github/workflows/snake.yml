@@ -1,5 +1,9 @@
 name: Generate GitHub contribution-snake
 
+# Allow the workflow to write repository contents (required to push files with GITHUB_TOKEN)
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 6 * * *' # daily at 06:00 UTC
@@ -15,6 +19,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # ensure the checkout action can use the token we pass below
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate snake game from contribution grid
         uses: Platane/snk@v3.3.0
