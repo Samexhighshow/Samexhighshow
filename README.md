@@ -46,24 +46,24 @@ Welcome to my corner of GitHub — I build secure, practical web solutions for e
 ---
 
 ## 📊 GitHub Stats
-![Maximus's GitHub stats](https://github-readme-stats.vercel.app/api?username=YourGitHubUsername&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YourGitHubUsername&layout=compact&theme=radical)
+![Maximus's GitHub stats](https://github-readme-stats.vercel.app/api?username=Samexhighshow&show_icons=true&theme=radical)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Samexhighshow&layout=compact&theme=radical)
 
 ---
 
 ## 🐍 Contribution Snake
-![snake gif](https://github.com/YourGitHubUsername/YourGitHubUsername/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/Samexhighshow/Samexhighshow/blob/output/github-contribution-grid-snake.svg)
 
 > **How to enable the snake:**  
-> 1. Replace `YourGitHubUsername` above with your GitHub username.  
-> 2. Follow the instructions in the `Platane/snk` or `github-contribution-grid-snake` action repo to enable the GitHub Action — it generates the `/output/github-contribution-grid-snake.svg` file automatically in your profile repo.
+> 1. You already have your username set as `Samexhighshow`.  
+> 2. Follow the instructions in the [Platane/snk](https://github.com/Platane/snk) repository to set up the GitHub Action — it’ll automatically generate this SVG file every day.
 
 ---
 
 ## 🔗 Connect
-- GitHub: `https://github.com/YourGitHubUsername`  
-- Email: `your.email@example.com`  
-- LinkedIn: `https://www.linkedin.com/in/yourprofile`  
+- 🌐 GitHub: [github.com/Samexhighshow](https://github.com/Samexhighshow)  
+- ✉️ Email: [your.email@example.com](mailto:your.email@example.com)  
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 
 ---
 
