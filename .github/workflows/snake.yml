@@ -1,0 +1,38 @@
+name: Generate GitHub contribution-snake
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    name: Generate snake images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake game from contribution grid
+        uses: Platane/snk@v3.3.0
+        with:
+          # repo owner (default to the repository owner)
+          github_user_name: ${{ github.repository_owner }}
+          # list of output files to generate (one per line). Query string customizes each output.
+          outputs: |
+            output/github-snake.svg
+            output/github-snake-dark.svg?palette=github-dark
+            output/github-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+
+      - name: Commit and push generated images
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: update github-snake images"
+          add: "output/*"
+          author_name: "github-actions[bot]"
+          author_email: "41898282+github-actions[bot]@users.noreply.github.com"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
