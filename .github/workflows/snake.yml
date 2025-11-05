@@ -7,7 +7,12 @@ permissions:
 on:
   schedule:
     - cron: '0 6 * * *' # daily at 06:00 UTC
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'GitHub username to generate the contribution grid for (optional). If empty, repo owner will be used.'
+        required: false
+        default: ''
   push:
     branches:
       - main
@@ -27,13 +32,24 @@ jobs:
       - name: Generate snake game from contribution grid
         uses: Platane/snk@v3.3.0
         with:
-          # repo owner (default to the repository owner)
-          github_user_name: ${{ github.repository_owner }}
+          # repo owner (default to the repository owner). When running manually you can pass `username`.
+          github_user_name: ${{ github.event.inputs.username || github.repository_owner }}
           # list of output files to generate (one per line). Query string customizes each output.
           outputs: |
             output/github-snake.svg
             output/github-snake-dark.svg?palette=github-dark
             output/github-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+
+      - name: Show generated files (debug)
+        run: |
+          echo "Contents of output/"
+          ls -la output || echo "no output directory"
+
+      - name: Upload generated images as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: snake-output
+          path: output/*
 
       - name: Commit and push generated images
         uses: EndBug/add-and-commit@v9
