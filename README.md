@@ -52,11 +52,16 @@ Welcome to my corner of GitHub — I build secure, practical web solutions for e
 ---
 
 ## 🐍 Contribution Snake
-![snake gif](https://github.com/Samexhighshow/Samexhighshow/blob/output/github-contribution-grid-snake.svg)
+<picture>
+	<source media="(prefers-color-scheme: dark)" srcset="output/github-snake-dark.svg" />
+	<source media="(prefers-color-scheme: light)" srcset="output/github-snake.svg" />
+	<img alt="github-snake" src="output/github-snake.svg" />
+</picture>
 
 > **How to enable the snake:**  
-> 1. You already have your username set as `Samexhighshow`.  
-> 2. Follow the instructions in the [Platane/snk](https://github.com/Platane/snk) repository to set up the GitHub Action — it’ll automatically generate this SVG file every day.
+> 1. Your workflow already exists at `.github/workflows/snake.yml` — it generates `output/github-snake.svg`, `output/github-snake-dark.svg`, and a GIF.  
+> 2. Trigger the workflow (Actions tab → select the workflow → Run workflow) or wait for the scheduled run.  
+> 3. If images don't appear, open the workflow run and download the `snake-output` artifact (the workflow uploads generated images for inspection).
 
 ---
 
