@@ -58,10 +58,6 @@ Welcome to my corner of GitHub — I build secure, practical web solutions for e
 	<img alt="github-snake" src="output/github-snake.svg" />
 </picture>
 
-> **How to enable the snake:**  
-> 1. Your workflow already exists at `.github/workflows/snake.yml` — it generates `output/github-snake.svg`, `output/github-snake-dark.svg`, and a GIF.  
-> 2. Trigger the workflow (Actions tab → select the workflow → Run workflow) or wait for the scheduled run.  
-> 3. If images don't appear, open the workflow run and download the `snake-output` artifact (the workflow uploads generated images for inspection).
 
 ---
 
